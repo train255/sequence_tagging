@@ -65,10 +65,10 @@ class Config():
     dim_char = 100
 
     # glove files
-    filename_glove = "data/glove.6B/glove.6B.{}d.txt".format(dim_word)
+    filename_glove = "data/glove.840B.300d/glove.840B.300d.{}d.txt".format(dim_word)
     # trimmed embeddings (created from glove_filename with build_data.py)
-    filename_trimmed = "data/glove.6B.{}d.trimmed.npz".format(dim_word)
-    use_pretrained = False
+    filename_trimmed = "data/glove.840B.300d.{}d.trimmed.npz".format(dim_word)
+    use_pretrained = True
 
     # dataset
     filename_dev = "data/dev.iob"
