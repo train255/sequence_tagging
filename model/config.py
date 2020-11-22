@@ -68,7 +68,7 @@ class Config():
     filename_glove = "data/glove.6B/glove.6B.{}d.txt".format(dim_word)
     # trimmed embeddings (created from glove_filename with build_data.py)
     filename_trimmed = "data/glove.6B.{}d.trimmed.npz".format(dim_word)
-    use_pretrained = True
+    use_pretrained = False
 
     # dataset
     filename_dev = "data/dev.iob"
@@ -86,14 +86,14 @@ class Config():
 
     # training
     train_embeddings = False
-    nepochs          = 100
+    nepochs          = 1000
     dropout          = 0.5
     batch_size       = 20
     lr_method        = "adam"
     lr               = 0.001
     lr_decay         = 0.9
     clip             = -1 # if negative, no clipping
-    nepoch_no_imprv  = 3
+    nepoch_no_imprv  = 5
 
     # model hyperparameters
     hidden_size_char = 100 # lstm on chars
